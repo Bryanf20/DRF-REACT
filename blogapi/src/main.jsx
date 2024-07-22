@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import App from "./App.jsx";
 import "./index.css";
 import Header from "./Components/Header.jsx";
-import Footer from "./Components/Footer.jsx";
+// import Footer from "./Components/Footer.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <Router>
@@ -13,7 +13,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <Routes>
         <Route path="/" Component={App} />
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </React.StrictMode>
   </Router>
 );
