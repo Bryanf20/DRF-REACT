@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-import PostLoading from "./Components/PostLoading";
+import PostLoading from "./Components/postLoading";
 // import Posts from "./Components/Posts";
 // import PostLoadingComponent from "./Components/PostLoading";
 

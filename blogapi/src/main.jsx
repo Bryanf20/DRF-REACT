@@ -3,8 +3,8 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import App from "./App.jsx";
 import "./index.css";
-import Header from "./Components/Header.jsx";
-// import Footer from "./Components/Footer.jsx";
+import Header from "./Components/header.jsx";
+// import footer from "./Components/footer.jsx";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <Router>

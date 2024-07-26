@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import Posts from "./Posts";
+import Posts from "./posts";
 
 export default function PostLoading({ isLoading, posts }) {
   return (

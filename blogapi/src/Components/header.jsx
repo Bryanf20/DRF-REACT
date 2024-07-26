@@ -25,7 +25,7 @@ export default function Header() {
       >
         <Toolbar>
           <Typography variant="h6" color="inherit" noWrap>
-            BlogmeUp
+            Blog
           </Typography>
         </Toolbar>
       </AppBar>
