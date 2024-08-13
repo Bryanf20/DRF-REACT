@@ -31,6 +31,7 @@ import Footer from "./Components/footer.jsx";
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { createTheme, ThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
+import Search from "./Components/search.jsx";
 
 const Main = () => {
   const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
@@ -57,6 +58,7 @@ const Main = () => {
             <Route path="/login" Component={SignIn} />
             <Route path="/logout" Component={Logout} />
             <Route path="/post/:slug" Component={Single} />
+            <Route path="/search" Component={Search} />
           </Routes>
           <Footer />
         </React.StrictMode>

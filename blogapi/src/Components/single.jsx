@@ -17,17 +17,30 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function Single() {
-  const { slug } = useParams();
+  const { slug } = useParams(); // Alows us to extract slug parameter from the url
   const classes = useStyles();
 
-  const [data, setData] = useState({ posts: [] });
+  const [data, setData] = useState(null);
 
   useEffect(() => {
-    axiosInstance.get(slug).then((res) => {
+    axiosInstance.get(`posts/${slug}`).then((res) => {
       setData({ posts: res.data });
-      console.log(res.data);
+      console.log(res.data.title);
     });
-  }, [setData]);
+  }, [slug]);
+
+  if (!data) {
+    return (
+      <Container component="main" maxWidth="md">
+        <CssBaseline />
+        <div className={classes.paper}>
+          <Typography variant="h5" align="center" color="textSecondary">
+            Loading...
+          </Typography>
+        </div>
+      </Container>
+    );
+  }
 
   return (
     <Container component="main" maxWidth="md">
