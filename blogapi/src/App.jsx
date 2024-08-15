@@ -41,17 +41,47 @@ function App() {
 
 export default App;
 
-// import React from "react";
+// Test function to display search results on home page, instead of creating a search page
+// import PropTypes from "prop-types";
 
-// class connectionExample extends React.Component {
-//   componentDidMount() {
-//     const apiUrl = "http://127.0.0.1:8000/api/";
-//     fetch(apiUrl)
-//       .then((response) => response.json())
-//       .then((data) => console.log(data));
-//   }
-//   render() {
-//     return <div>Example connection</div>;
-//   }
+// function App(props) {
+//   const [appState, setAppState] = useState({
+//     loading: false,
+//     posts: null,
+//   });
+
+//   useEffect(() => {
+//     if (props.posts == null) {
+//       // Fetch posts if props is not provided
+//       axiosInstance.get().then((res) => {
+//         const allPosts = res.data;
+//         setAppState({ loading: false, posts: allPosts });
+//         console.log(res.data);
+//       });
+//     } else {
+//       // Set posts from props
+//       setAppState({ loading: false, posts: props.posts });
+//     }
+//   }, [props]);
+
+//   return (
+//     <div className="App">
+//       <h1>Latest Posts</h1>
+//       {console.log(appState.posts)}
+//       <PostLoading isLoading={appState.loading} posts={appState.posts} />
+//     </div>
+//   );
 // }
-// export default connectionExample;
+
+// export default App;
+
+// App.propTypes = {
+//   posts: PropTypes.arrayOf(
+//     PropTypes.shape({
+//       id: PropTypes.number.isRequired,
+//       title: PropTypes.string.isRequired,
+//       excerpt: PropTypes.string.isRequired,
+//     })
+//   ),
+// };
+

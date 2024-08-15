@@ -53,12 +53,12 @@ const Main = () => {
         <React.StrictMode>
           <Header />
           <Routes>
-            <Route exact path="/" Component={App} />
-            <Route path="/register" Component={SignUp} />
-            <Route path="/login" Component={SignIn} />
-            <Route path="/logout" Component={Logout} />
-            <Route path="/post/:slug" Component={Single} />
-            <Route path="/search" Component={Search} />
+            <Route path="/" element={<App />} />
+            <Route path="/register" element={<SignUp />} />
+            <Route path="/login" element={<SignIn />} />
+            <Route path="/logout" element={<Logout />} />
+            <Route path="/post/:slug" element={<Single />} />
+            <Route path="/search" element={<Search />} />
           </Routes>
           <Footer />
         </React.StrictMode>
