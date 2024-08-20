@@ -5,6 +5,7 @@ npm install react-router-dom
 npm install @material-ui/core
 pip install django-cors-headers
 npm install axios // for API calls
+npm install @material-ui/icons
 
 Info:
 Strict Mode

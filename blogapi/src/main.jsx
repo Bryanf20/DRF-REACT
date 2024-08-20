@@ -9,6 +9,10 @@ import SignIn from "./Components/login.jsx";
 import Logout from "./Components/logout.jsx";
 import Single from "./Components/single.jsx";
 import Footer from "./Components/footer.jsx";
+import Admin from "./admin.jsx";
+import Create from "./Components/admin/create.jsx";
+import Edit from "./Components/admin/edit.jsx";
+import Delete from "./Components/admin/delete.jsx";
 
 // ReactDOM.createRoot(document.getElementById("root")).render(
 //   <Router>
@@ -26,11 +30,10 @@ import Footer from "./Components/footer.jsx";
 //   </Router>
 // );
 
-
-// Best to use app.jsx to handle routing for more complex projects 
-import useMediaQuery from '@material-ui/core/useMediaQuery';
-import { createTheme, ThemeProvider } from '@material-ui/core/styles';
-import CssBaseline from '@material-ui/core/CssBaseline';
+// Best to use app.jsx to handle routing for more complex projects
+import useMediaQuery from "@material-ui/core/useMediaQuery";
+import { createTheme, ThemeProvider } from "@material-ui/core/styles";
+import CssBaseline from "@material-ui/core/CssBaseline";
 import Search from "./Components/search.jsx";
 
 const Main = () => {
@@ -54,6 +57,10 @@ const Main = () => {
           <Header />
           <Routes>
             <Route path="/" element={<App />} />
+            <Route exact path="/admin" element={<Admin />} />
+            <Route exact path="/admin/create" element={<Create />} />
+            <Route exact path="/admin/edit/:id" element={<Edit />} />
+            <Route exact path="/admin/delete/:id" element={<Delete />} />
             <Route path="/register" element={<SignUp />} />
             <Route path="/login" element={<SignIn />} />
             <Route path="/logout" element={<Logout />} />
@@ -65,8 +72,6 @@ const Main = () => {
       </Router>
     </ThemeProvider>
   );
-}
+};
 
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <Main />
-);
+ReactDOM.createRoot(document.getElementById("root")).render(<Main />);

@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-import PostLoading from "./Components/postLoading";
+// import PostLoading from "./Components/postLoading";
 import axiosInstance from "./axios";
-// import Posts from "./Components/posts";
-// import PostLoadingComponent from "./Components/postLoading";
+import Posts from "./Components/posts";
+import PostLoadingComponent from "./Components/postLoading";
 
 function App() {
-  // const PostLoading = PostLoadingComponent(Posts);
+  const PostLoading = PostLoadingComponent(Posts);
   const [appState, setAppState] = useState({
     loading: false,
     posts: null,
